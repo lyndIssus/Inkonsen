@@ -1,0 +1,37 @@
+<form action="/entries/search" method="post">
+    <!-- Filtro por mês -->
+    <label for="mes">Mês:</label>
+    <select id="mes" name="mes">
+      <option value="-1">Selecione</option>
+      <option value="0">Janeiro</option>
+      <option value="1">Fevereiro</option>
+      <option value="2">Março</option>
+      <option value="3">Abril</option>
+      <option value="4">Maio</option>
+      <option value="5">Junho</option>
+      <option value="6">Julho</option>
+      <option value="7">Agosto</option>
+      <option value="8">Setembro</option>
+      <option value="9">Outubro</option>
+      <option value="10">Novembro</option>
+      <option value="11">Dezembro</option>
+    </select>
+    <label for="Tipo">Tipo:</label>
+    <select id="tipo" name="tipo">
+        <option value="">Selecione</option>
+        <option value="1">Receitas</option>
+        <option value="2">Despesas</option>
+      </select>
+  
+    <!-- Filtro por período -->
+    <label for="dataInicio">Data Início:</label>
+    <input type="date" id="dataInicio" name="dataInicio">
+  
+    <label for="dataFim">Data Fim:</label>
+    <input type="date" id="dataFim" name="dataFim">
+  
+    <!-- Botão para enviar a pesquisa -->
+    <button type="submit">Pesquisar</button>
+  </form>
+  
+  

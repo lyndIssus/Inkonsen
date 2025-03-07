@@ -1,0 +1,28 @@
+<%- include('partials/header'); -%>
+
+
+<div class="d-flex flex-row justify-content-center">
+  <form class="w-50 mt-3 d-flex flex-column align-items-center row g-3 needs-validation" novalidate action="<%= isUpdate ? `/entries/${task.id}/update` : '/entries/new' %>" method="post">
+      <h2 class="text-center mt-3"><%= message %></h2>
+      <input type="hidden" id="inputId" name="id" value="<%= isUpdate ? task.id : ''  %>">
+      <div class="mt-3">
+          <label for="inputName" class="form-label">Data</label>
+          <input type="<%isUpdate ? 'text' : 'date'%>" class="form-control" id="date" name="date" value= "<%= isUpdate ? task.date.toISOString() : ''  %>" required>
+      </div>
+      <div class="mt-3">
+          <label for="inputDescription" class="form-label">titulo</label>
+          <textarea rows="1" class="form-control" id="inputDescription" name="description" required><%= isUpdate ? task.description : ''  %></textarea>
+      </div>
+      <div class="mt-3">
+        <label class="form-check-label" for="isFinishedCheck">
+            Valor
+        </label>
+          <input class="form-control" type="number" id="value" name="value" value="<%= isUpdate ? task.value : ''  %>" required>
+          
+      </div>
+      <div class="mt-3">
+          <button type="submit" class="btn btn-primary w-100 mt-3">Entrar</button>
+      </div>
+  </form>
+</div>
+<%- include("partials/footer") %>
